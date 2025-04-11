@@ -34,7 +34,7 @@ const Resume = () => {
               variants={fadeInUp}
             >
               <a 
-                href="https://drive.google.com/file/d/1jvP5v0xzF6UFrWC3738OwkZ762wLMcgB/view?usp=drive_link" 
+                href="https://drive.google.com/file/d/1cIYmBgxBeO00kxNTbBrlxHGVDbUvd-TB/view?usp=drive_link" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 inline-flex items-center"
