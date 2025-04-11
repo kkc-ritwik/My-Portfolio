@@ -128,6 +128,6 @@ This portfolio can be deployed to:
 
 ## Contact
 - Ritwik Raj
-- Email: ritwiksinghkkc2gmail.com
+- Email: ritwiksinghkkc@gmail.com
 - LinkedIn: https://www.linkedin.com/in/kkc-ritwik/?profileId=ACoAADJac8IB7GnGK1zqU0ORR-yoO54q7kOg80A
 - GitHub: https://github.com/kkc-ritwik
