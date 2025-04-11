@@ -27,7 +27,7 @@ export const projectsData: ProjectItem[] = [
     ],
     
     github: "https://github.com/kkc-ritwik/RecruitHub",
-    live: "https://youtu.be/2XF-HgauItk?si=xnuz7_gpUVBBgdW6",
+    live: "https://github.com/kkc-ritwik/RecruitHub",
     details: {
       problem:
         "Traditional hiring systems are fragmented, lack automation, and don't offer role-based access for different HR levels.",
@@ -50,7 +50,7 @@ export const projectsData: ProjectItem[] = [
     image: "schedulrr.png",
     tech: ["Spring Boot", "MySQL", "JWT", "Spring Security", "REST APIs", "Lombok", "Maven"],
     github: "https://github.com/kkc-ritwik/Foodie-Express/tree/Foodie",
-    live: "https://youtu.be/glAC7d-TYSM?si=KW5Wrdeh5uVPpu7c",
+    live: "https://github.com/kkc-ritwik/Foodie-Express/tree/Foodie",
     details: {
       problem: "Managing large-scale food orders, restaurant data, and delivery logistics in real time while ensuring secure user access and efficient performance.",
       solution:
@@ -73,7 +73,7 @@ export const projectsData: ProjectItem[] = [
     image: "zcrum.png",
     tech: ["ReactJS", "Redux", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
     github: "https://github.com/kkc-ritwik/Study-Notion/tree/StudyNotion",
-    live: "https://youtu.be/R5dBYINNouY?si=9x7lSDuqwJ0ojtIg",
+    live: "https://github.com/kkc-ritwik/Study-Notion/tree/StudyNotion",
     details: {
       problem: "Lack of accessible and interactive platforms for students and instructors to engage with quality educational content.",
       solution:
@@ -97,7 +97,7 @@ export const projectsData: ProjectItem[] = [
     image: "reflct.png",
     tech: ["Spring Boot", "MySQL", "JWT", "Hibernate"],
     github: "https://github.com/kkc-ritwik/HRMS-BACKEND/branches",
-    live: "https://youtu.be/R5dBYINNouY?si=9x7lSDuqwJ0ojtIg",
+    live: "https://github.com/kkc-ritwik/HRMS-BACKEND/branches",
     details: {
       problem: "Managing HR processes manually leads to inefficiency and errors",
       solution:

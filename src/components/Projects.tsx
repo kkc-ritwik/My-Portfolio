@@ -86,7 +86,7 @@ export default function Projects() {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink className="w-5 h-5" />
-                    Live Demo
+                    Live Demo Coming Soon 🚀
                   </a>
                 </div>
               </div>
