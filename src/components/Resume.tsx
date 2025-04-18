@@ -85,7 +85,7 @@ const Resume = () => {
               whileHover={{ scale: 1.05 }}
             >
               <a 
-                href="https://drive.google.com/file/d/1cIYmBgxBeO00kxNTbBrlxHGVDbUvd-TB/view?usp=drive_link" 
+                href="https://drive.google.com/file/d/1-H-H-8n4XKgSZis77Z4I-kbO_y0Kn5Bu/view?usp=drive_link" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
