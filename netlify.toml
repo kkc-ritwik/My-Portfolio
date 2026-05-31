@@ -6,6 +6,11 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
 # SPA fallback so client-side routing / refreshes serve index.html.
 # (Function routes like /api/chat are matched first and are unaffected.)
 [[redirects]]
