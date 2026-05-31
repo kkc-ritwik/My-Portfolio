@@ -32,6 +32,69 @@ const LANG_BAR = [
   'bg-violet-500',
 ];
 
+const REPO_FALLBACK_COPY: Record<string, { title?: string; description: string }> = {
+  'HRMS-SaaS-Platform': {
+    title: 'HRMS SaaS Platform',
+    description:
+      'Enterprise-grade multi-tenant HRMS built with Spring Boot microservices, covering payroll, recruitment, compliance, and employee lifecycle management.',
+  },
+  RecruitHub: {
+    description:
+      'Role-based recruitment system for HR teams and candidates, built to streamline hiring workflows, interviews, and application tracking.',
+  },
+  'Foodie-Express': {
+    title: 'Foodie Express',
+    description:
+      'Scalable backend for food delivery with secure authentication, order lifecycle APIs, and restaurant operations management.',
+  },
+  'Study-Notion': {
+    title: 'Study Notion',
+    description:
+      'MERN ed-tech platform with dashboards, course management, and end-to-end student purchase and learning flow.',
+  },
+  HRPulse: {
+    description:
+      'Human resource management backend focused on payroll automation, leave workflows, attendance, and role-based access control.',
+  },
+  'ProductInventoryAPI': {
+    title: 'Product Inventory API',
+    description:
+      '.NET Web API for product inventory management using SQL Server and EF Core with clean architecture and Swagger docs.',
+  },
+  'IIA-DB': {
+    title: 'IIA DB',
+    description:
+      'Database design and SQL practice repository used for schema design, query optimization, and relational modeling exercises.',
+  },
+  'Sai-Frontend': {
+    title: 'Sai Frontend',
+    description:
+      'Frontend application repository focused on reusable UI, responsive layouts, and practical web app workflows.',
+  },
+  'Export-Blazor-DataGrid-to-Excel': {
+    title: 'Export Blazor DataGrid to Excel',
+    description:
+      'Blazor utility demonstrating reliable DataGrid export to Excel in enterprise-style reporting scenarios.',
+  },
+};
+
+function humanizeRepoName(repoName: string): string {
+  return repoName.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function getRepoTitle(repo: Repo): string {
+  return REPO_FALLBACK_COPY[repo.name]?.title || humanizeRepoName(repo.name);
+}
+
+function getRepoDescription(repo: Repo): string {
+  const githubDescription = repo.description?.trim();
+  if (githubDescription) return githubDescription;
+  return (
+    REPO_FALLBACK_COPY[repo.name]?.description ||
+    'Production-ready repository by Ritwik Raj. Open on GitHub to view implementation details.'
+  );
+}
+
 export default function GitHubActivity() {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [user, setUser] = useState<GitUser | null>(null);
@@ -208,12 +271,12 @@ export default function GitHubActivity() {
               >
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-bold text-white truncate group-hover:text-indigo-300 transition-colors">
-                    {repo.name}
+                    {getRepoTitle(repo)}
                   </h3>
                   <ExternalLink className="w-4 h-4 text-gray-400 flex-shrink-0" />
                 </div>
                 <p className="text-sm text-gray-400 mb-4 line-clamp-2 min-h-[2.5rem]">
-                  {repo.description || 'No description provided.'}
+                  {getRepoDescription(repo)}
                 </p>
                 <div className="flex items-center gap-4 text-xs text-gray-400">
                   {repo.language && (
