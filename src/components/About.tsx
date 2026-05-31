@@ -74,7 +74,7 @@
 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../utils/animations";
-import { User, Award, Youtube, Heart } from "lucide-react";
+import { User, Award, Briefcase, Heart } from "lucide-react";
 
 export default function About() {
   return (
@@ -124,16 +124,16 @@ export default function About() {
                 alt="Ritwik Raj"
                 className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
               />
-              
+
               {/* Decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <motion.div 
+
+              <motion.div
                 className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 initial={{ y: 20, opacity: 0 }}
                 whileHover={{ y: 0, opacity: 1 }}
               >
-                <p className="text-white text-sm font-medium">Full Stack Developer</p>
+                <p className="text-white text-sm font-medium">Full Stack &amp; Backend Developer</p>
                 <div className="flex items-center mt-2">
                   <Heart className="w-4 h-4 text-red-500 mr-1" />
                   <span className="text-xs text-gray-200">Passionate about coding</span>
@@ -143,34 +143,38 @@ export default function About() {
           </motion.div>
 
           <motion.div className="space-y-6" variants={staggerContainer}>
-            <motion.div 
+            <motion.div
               className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-teal-500/30 shadow-lg"
               variants={fadeInUp}
               whileHover={{ boxShadow: "0 20px 25px -5px rgba(45,212,191,0.3)" }}
             >
               <motion.p className="text-lg text-gray-300 leading-relaxed" variants={fadeInUp}>
-                I'm Ritwik Raj, a passionate and results-driven Full Stack Developer with
-                hands-on experience in building scalable, production-grade web
-                applications using modern technologies like Spring Boot, ReactJS, and
-                NodeJS. I bring a solid foundation in computer science principles, cloud
-                deployment, and test-driven development, with a strong commitment to
-                writing clean, efficient, and maintainable code.
+                I'm Ritwik Raj, a results-driven Full Stack &amp; Backend Developer with
+                hands-on experience across both the <span className="font-semibold text-teal-300">Java (Spring Boot, Microservices)</span> and
+                <span className="font-semibold text-teal-300"> .NET (Web API, Blazor, Entity Framework Core)</span> ecosystems.
+                I build scalable, secure, production-grade applications end to end — from
+                designing microservice backends and relational schemas to crafting modern
+                React and Blazor front-ends. I work with databases like PostgreSQL, SQL
+                Server, MySQL and MongoDB, and deploy cloud-native workloads on
+                <span className="font-semibold text-teal-300"> AWS (EC2)</span> and
+                <span className="font-semibold text-teal-300"> Azure</span> using Docker, Kubernetes and CI/CD pipelines.
               </motion.p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-blue-500/30 shadow-lg"
               variants={fadeInUp}
               whileHover={{ boxShadow: "0 20px 25px -5px rgba(59,130,246,0.3)" }}
             >
               <motion.p className="text-lg text-gray-300 leading-relaxed" variants={fadeInUp}>
-                From designing backend microservices to deploying full-stack
-                applications with Docker and CI/CD pipelines, I focus on delivering
-                reliable, high-performance solutions. With 200+ DSA problems solved
-                and national-level hackathon experience, I combine problem-solving
-                skills with practical development to build impactful tech products.
-                I'm continuously learning, growing, and looking for opportunities to
-                contribute to challenging and innovative projects in the tech space.
+                Alongside my full-time roles, I actively work as a freelance developer and
+                have delivered several successful projects for clients — including ongoing
+                engagements with <span className="font-semibold text-blue-300">Sky Tech</span> (Full Stack Developer &amp; support) and
+                <span className="font-semibold text-blue-300"> Triaxa FZCO</span> (Backend Developer — microservices &amp; reactive systems).
+                With 200+ DSA problems solved and national-level hackathon experience, I
+                combine strong problem-solving with practical engineering to ship reliable,
+                high-performance products. I'm always learning and eager to take on
+                challenging, innovative work.
               </motion.p>
             </motion.div>
 
@@ -178,42 +182,42 @@ export default function About() {
               className="grid grid-cols-2 gap-4 pt-4"
               variants={fadeInUp}
             >
-              <motion.div 
+              <motion.div
                 className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-teal-500/30 shadow-lg flex flex-col items-center justify-center"
-                whileHover={{ 
-                  y: -8, 
+                whileHover={{
+                  y: -8,
                   boxShadow: "0 20px 25px -5px rgba(45,212,191,0.3)",
                   transition: { duration: 0.3 }
                 }}
               >
-                <motion.div 
+                <motion.div
                   className="w-12 h-12 bg-gradient-to-r from-teal-600 to-blue-600 rounded-full flex items-center justify-center mb-3 shadow-[0_0_15px_rgba(45,212,191,0.5)]"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
                   <Award className="w-6 h-6 text-white" />
                 </motion.div>
-                <h3 className="font-bold text-2xl text-white mb-1">1+</h3>
+                <h3 className="font-bold text-2xl text-white mb-1">2+</h3>
                 <p className="text-teal-300">Years Experience</p>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-blue-500/30 shadow-lg flex flex-col items-center justify-center"
-                whileHover={{ 
-                  y: -8, 
+                whileHover={{
+                  y: -8,
                   boxShadow: "0 20px 25px -5px rgba(59,130,246,0.3)",
                   transition: { duration: 0.3 }
                 }}
               >
-                <motion.div 
+                <motion.div
                   className="w-12 h-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full flex items-center justify-center mb-3 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Youtube className="w-6 h-6 text-white" />
+                  <Briefcase className="w-6 h-6 text-white" />
                 </motion.div>
-                <h3 className="font-bold text-2xl text-white mb-1">40 (but loyal)</h3>
-                <p className="text-blue-300">YouTube Subscribers</p>
+                <h3 className="font-bold text-2xl text-white mb-1">10+</h3>
+                <p className="text-blue-300">Freelance Projects Delivered</p>
               </motion.div>
             </motion.div>
           </motion.div>

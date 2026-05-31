@@ -756,9 +756,13 @@
 
 
 
-import { ArrowDown, Code, Terminal, Sparkles, Zap } from 'lucide-react';
+import { ArrowDown, Sparkles, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '../utils/animations';
+
+// Paste your Calendly (or any booking) link here to enable the "Book a Free Call"
+// button. While empty, the button gracefully scrolls to the contact form instead.
+const CALENDLY_URL = '';
 
 export default function Hero() {
   return (
@@ -858,12 +862,15 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
           >
-            <motion.div 
-              className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20"
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.15)" }}
+            <motion.div
+              className="flex items-center space-x-2 bg-green-500/10 backdrop-blur-sm px-4 py-2 rounded-full border border-green-400/30"
+              whileHover={{ scale: 1.05, backgroundColor: "rgba(34,197,94,0.18)" }}
             >
-              <Zap className="w-4 h-4 text-indigo-400" />
-              <span className="text-sm font-medium text-white">Full Stack Developer</span>
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+              </span>
+              <span className="text-sm font-medium text-green-300">Available for Freelance Work</span>
             </motion.div>
           </motion.div>
 
@@ -903,7 +910,7 @@ export default function Hero() {
           >
             <span className="inline-block mx-1 relative">
               <span className="relative z-10">Full Stack Developer</span>
-              <motion.span 
+              <motion.span
                 className="absolute bottom-0 left-0 right-0 h-2 bg-indigo-500/30 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
@@ -912,8 +919,8 @@ export default function Hero() {
             </span>
             <span className="mx-2">|</span>
             <span className="inline-block mx-1 relative">
-              <span className="relative z-10">Java Backend Developer</span>
-              <motion.span 
+              <span className="relative z-10">Java &amp; .NET Backend Developer</span>
+              <motion.span
                 className="absolute bottom-0 left-0 right-0 h-2 bg-purple-500/30 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
@@ -922,12 +929,22 @@ export default function Hero() {
             </span>
             <span className="mx-2">|</span>
             <span className="inline-block mx-1 relative">
-              <span className="relative z-10">Problem Solver</span>
-              <motion.span 
-                className="absolute bottom-0 left-0 right-0 h-2 bg-blue-500/30 rounded-full"
+              <span className="relative z-10">Cloud (AWS &amp; Azure)</span>
+              <motion.span
+                className="absolute bottom-0 left-0 right-0 h-2 bg-cyan-500/30 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 1.9, duration: 0.4 }}
+              />
+            </span>
+            <span className="mx-2">|</span>
+            <span className="inline-block mx-1 relative">
+              <span className="relative z-10">Problem Solver</span>
+              <motion.span
+                className="absolute bottom-0 left-0 right-0 h-2 bg-blue-500/30 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ delay: 2.1, duration: 0.4 }}
               />
             </span>
           </motion.p>
@@ -947,6 +964,21 @@ export default function Hero() {
               <span className="relative flex items-center justify-center">
                 View My Work
                 <Sparkles className="w-4 h-4 ml-2 opacity-70" />
+              </span>
+            </motion.a>
+            <motion.a
+              href={CALENDLY_URL || '#contact'}
+              target={CALENDLY_URL ? '_blank' : undefined}
+              rel={CALENDLY_URL ? 'noopener noreferrer' : undefined}
+              className="group relative px-8 py-3 rounded-full text-white overflow-hidden"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 shadow-lg shadow-green-500/25"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="relative flex items-center justify-center">
+                Book a Free Call
+                <Calendar className="w-4 h-4 ml-2 opacity-80" />
               </span>
             </motion.a>
             <motion.a

@@ -111,6 +111,7 @@ import { motion } from 'framer-motion';
 import { projectsData } from '../data/projects';
 import ProjectModal from './ProjectModal';
 import type { ProjectItem } from '../types';
+import { trackEvent } from '../utils/analytics';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
@@ -206,7 +207,10 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-gray-300 hover:text-white bg-gray-800/50 hover:bg-gray-700/50 px-4 py-2 rounded-full transition-colors duration-300 border border-gray-600/30"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      trackEvent('project_code_clicked', { project_title: project.title });
+                    }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -218,7 +222,10 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-gray-300 hover:text-white bg-purple-800/50 hover:bg-purple-700/50 px-4 py-2 rounded-full transition-colors duration-300 border border-purple-500/30"
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      trackEvent('project_live_clicked', { project_title: project.title });
+                    }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Ritwik Raj — Full Stack and Backend Developer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="120" r="260" fill="url(#glow)"/>
+  <circle cx="1040" cy="560" r="300" fill="url(#glow)"/>
+
+  <!-- Availability pill -->
+  <g transform="translate(80,90)">
+    <rect width="290" height="46" rx="23" fill="#22c55e" fill-opacity="0.12" stroke="#22c55e" stroke-opacity="0.4"/>
+    <circle cx="30" cy="23" r="7" fill="#22c55e"/>
+    <text x="50" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" fill="#86efac">Available for Freelance Work</text>
+  </g>
+
+  <!-- Name -->
+  <text x="80" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="92" font-weight="800" fill="url(#name)">Ritwik Raj</text>
+
+  <!-- Role -->
+  <text x="80" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="600" fill="#ffffff">Full Stack &amp; Backend Developer</text>
+  <text x="80" y="372" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#a5b4fc">Java · Spring Boot · .NET · React · Microservices · AWS &amp; Azure</text>
+
+  <!-- Tech chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">
+    <g transform="translate(80,430)">
+      <rect width="180" height="54" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#818cf8" stroke-opacity="0.4"/>
+      <text x="90" y="35" text-anchor="middle" fill="#e0e7ff">Spring Boot</text>
+    </g>
+    <g transform="translate(280,430)">
+      <rect width="120" height="54" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#818cf8" stroke-opacity="0.4"/>
+      <text x="60" y="35" text-anchor="middle" fill="#e0e7ff">.NET</text>
+    </g>
+    <g transform="translate(420,430)">
+      <rect width="130" height="54" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#818cf8" stroke-opacity="0.4"/>
+      <text x="65" y="35" text-anchor="middle" fill="#e0e7ff">React</text>
+    </g>
+    <g transform="translate(570,430)">
+      <rect width="230" height="54" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#818cf8" stroke-opacity="0.4"/>
+      <text x="115" y="35" text-anchor="middle" fill="#e0e7ff">Microservices</text>
+    </g>
+    <g transform="translate(820,430)">
+      <rect width="200" height="54" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#818cf8" stroke-opacity="0.4"/>
+      <text x="100" y="35" text-anchor="middle" fill="#e0e7ff">AWS &amp; Azure</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="80" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#64748b">2+ years experience · 10+ projects delivered · Trusted by clients worldwide</text>
+</svg>

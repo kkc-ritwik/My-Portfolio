@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(git check-ignore *)",
+      "Bash(rm -f api/chat.ts)",
+      "Bash(rmdir api *)",
+      "Bash(netlify dev *)",
+      "Bash(curl -s -o /dev/null http://localhost:8888)",
+      "Bash(break)",
+      "Bash(curl -s -X POST http://localhost:8888/api/chat -H \"Content-Type: application/json\" -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Does Ritwik have experience with microservices and Kafka?\"}]}')",
+      "Bash(curl -s -X POST \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent\" -H \"Content-Type: application/json\" -H \"x-goog-api-key: ${GEMINI_API_KEY}\" -d '{\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"say hi\"}]}]}')",
+      "Bash(curl -s -X POST http://localhost:8888/api/chat -H \"Content-Type: application/json\" -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Does Ritwik have experience with microservices and Kafka? And is he available for freelance work?\"}]}')",
+      "Bash(curl -s -X POST http://localhost:8888/api/chat -H \"Content-Type: application/json\" -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Does Ritwik do iOS/Swift mobile app development?\"}]}')",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git rm *)",
+      "Bash(rm -f public/hirrd.png public/schedulrr.png public/zcrum.png public/reflct.png)",
+      "Bash(curl -s -o /dev/null -w \"site HTTP %{http_code}\\\\n\" http://localhost:8888)",
+      "Bash(curl -s \"https://api.github.com/users/kkc-ritwik/repos?per_page=1\" -o /dev/null -w \"GitHub API reachable: HTTP %{http_code}\\\\n\")"
+    ]
+  }
+}

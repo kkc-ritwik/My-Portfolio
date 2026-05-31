@@ -1,14 +1,25 @@
 import { Mail, MapPin, Send, MessageSquare, User, AtSign } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { trackEvent } from '../utils/analytics';
+
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = 'service_p3f9vjr';
+const EMAILJS_TEMPLATE_ID = 'template_nlz32tp';
+const EMAILJS_PUBLIC_KEY = 'R51tUKDUUK_3doTy8';
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize the EmailJS SDK once with the public key
+  useEffect(() => {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,15 +28,19 @@ export default function Contact() {
     try {
       setIsSubmitting(true);
       await emailjs.sendForm(
-        'service_p3f9vjr',
-        'template_nlz32tp',
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         formRef.current,
-        'R51tUKDUUK_3doTy8'
+        { publicKey: EMAILJS_PUBLIC_KEY }
       );
-      toast.success('Message sent successfully!');
+      trackEvent('contact_form_submitted', { status: 'success' });
+      toast.success('Message sent successfully! I’ll get back to you soon.');
       formRef.current.reset();
     } catch (error) {
-      toast.error('Failed to send message. Please try again.');
+      // Surface the real reason in the console to make debugging easy
+      console.error('EmailJS send failed:', error);
+      trackEvent('contact_form_submitted', { status: 'error' });
+      toast.error('Failed to send message. Please email me directly at ritwiksinghkkc@gmail.com');
     } finally {
       setIsSubmitting(false);
     }

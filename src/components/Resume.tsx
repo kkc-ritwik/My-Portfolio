@@ -1,19 +1,9 @@
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../utils/animations";
-import { FaBriefcase, FaGraduationCap, FaDownload, FaCode, FaServer, FaDatabase, FaReact, FaJava, FaJs } from "react-icons/fa";
-import { SiTypescript, SiMysql, SiMongodb } from "react-icons/si";
+import { FaBriefcase, FaDownload } from "react-icons/fa";
+import { trackEvent } from '../utils/analytics';
 
 const Resume = () => {
-  const skills = [
-    { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-    { name: "React", icon: <FaReact className="text-blue-400" /> },
-    { name: "Java", icon: <FaJava className="text-red-500" /> },
-    { name: "Spring Boot", icon: <FaServer className="text-green-500" /> },
-    { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-  ];
-
   // const experiences = [
   //   {
   //     title: "Web Developer Intern",
@@ -63,31 +53,41 @@ const Resume = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <motion.div 
+          <motion.div
             className="backdrop-blur-sm bg-white/10 rounded-2xl p-8 mb-12 border border-white/20 shadow-xl"
             variants={fadeInUp}
           >
-            <motion.p 
+            <motion.h3
+              className="text-2xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Professional Journey
+            </motion.h3>
+            <motion.p
               className="text-lg text-gray-200 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
             >
-              I'm an aspiring developer specializing in web development and Java backend development. 
-              My goal is to leverage these technologies to create innovative solutions for real-world problems.
-              With a passion for clean code and user-centered design, I strive to build applications that make a difference.
+              I'm a Full Stack &amp; Backend Developer working across both the Java (Spring Boot,
+              Microservices) and .NET (Web API, Blazor, EF Core) ecosystems, with hands-on
+              experience in cloud deployment on AWS &amp; Azure and a track record of delivering
+              freelance projects. Grab my full resume below for the complete picture.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex justify-center"
               variants={fadeInUp}
               whileHover={{ scale: 1.05 }}
             >
-              <a 
-                href="https://drive.google.com/file/d/1-H-H-8n4XKgSZis77Z4I-kbO_y0Kn5Bu/view?usp=drive_link" 
-                target="_blank" 
+              <a
+                href="https://drive.google.com/file/d/1i-2LUOIFAOcQ4GQPvzuJtJt-FP55bya2/view?usp=sharing"
+                target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('resume_download_clicked')}
                 className="bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 <FaDownload className="h-5 w-5 mr-2" />

@@ -2,10 +2,59 @@ import { ProjectItem } from "../types";
 
 export const projectsData: ProjectItem[] = [
   {
+    title: "HRMS SaaS Platform",
+    description:
+      "A commercial, enterprise-grade multi-tenant HRMS SaaS platform architected with 32+ Spring Boot microservices on Java 17 — covering People, Payroll, Recruit, Connect, LMS and more, with full Indian payroll compliance.",
+    image: "hrms-saas.svg",
+    tech: [
+      // Backend & Microservices
+      "Java 17",
+      "Spring Boot 3.2",
+      "Spring Cloud",
+      "Spring WebFlux",
+      "Microservices",
+      "Eureka",
+      "API Gateway",
+      "Maven (multi-module)",
+      // Frontend
+      "React",
+      "TypeScript",
+      // Data & Infra
+      "PostgreSQL 16",
+      "Redis",
+      "Apache Kafka",
+      "Elasticsearch",
+      "MinIO",
+      "Docker",
+      "Kubernetes",
+      "OAuth2 / OpenID Connect",
+    ],
+    github: "https://github.com/kkc-ritwik/HRMS-SaaS-Platform",
+    live: "https://github.com/kkc-ritwik/HRMS-SaaS-Platform",
+    details: {
+      problem:
+        "Growing organizations need a single, secure, scalable system to manage the entire employee lifecycle — hiring, onboarding, payroll, leave, attendance, learning, expenses, documents and compliance — while keeping each client's data fully isolated and the system resilient enough to run as a true SaaS product.",
+      solution:
+        "Architected a production-grade, multi-tenant HRMS SaaS platform built on 32+ independently deployable Spring Boot microservices (Java 17) organized around business domains. The system uses an API Gateway as the single entry point, Eureka service discovery, centralized configuration, circuit breakers and an authorization server for security. Schema-per-tenant multi-tenancy on PostgreSQL 16 guarantees strict data isolation, while shared common libraries handle audit, security, storage, observability, resilience and search across every service.",
+      features: [
+        "32+ domain-driven microservices — People, Payroll, Recruit, Connect, LMS, Expense, Travel, Documents, Compliance, Assets, Helpdesk, Workflow, Notifications, Reporting & more",
+        "Schema-per-tenant multi-tenancy on PostgreSQL 16 with 150+ JPA entities, 200+ REST endpoints and 25 MapStruct mappers",
+        "Full Indian payroll compliance engine (PF, ESI, TDS) with automated salary processing",
+        "Reactive backend with Spring WebFlux plus Spring Cloud patterns — API Gateway, Eureka discovery, Circuit Breaker, centralized config & authorization server",
+        "Redis caching, Apache Kafka event streaming, Elasticsearch full-text search and MinIO object storage for enterprise-grade scalability",
+        "Secured with OAuth2 / OpenID Connect and audited via shared cross-cutting common libraries (security, audit, observability, resilience)",
+        "Fully containerized with Docker & Docker Compose and orchestrated on Kubernetes, with deployment, security, disaster-recovery and runbook documentation",
+        "React + TypeScript front-end consuming the gateway APIs across all HR modules",
+      ],
+      impact:
+        "Delivers a complete, ready-to-sell SaaS HRMS that scales horizontally per service, isolates every tenant's data, and replaces a dozen disjoint HR tools with one cohesive, cloud-native platform — demonstrating end-to-end ownership of a large-scale distributed system from architecture to deployment.",
+    },
+  },
+  {
     title: "RecruitHub",
     description:
       "Developed RecruitHub, a role-based recruitment system streamlining hiring for HR and candidates using SpringBoot, Thymeleaf, and MySQL",
-    image: "hirrd.png",
+    image: "projects/recruithub.svg",
     tech: [
       // Frontend
       "Thymeleaf",     // Server-side template engine
@@ -47,7 +96,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Foodie-Express",
     description: "A high-performance backend service powering an online food delivery platform with real-time order tracking and smart restaurant management.",
-    image: "schedulrr.png",
+    image: "projects/foodie-express.svg",
     tech: ["Spring Boot", "MySQL", "JWT", "Spring Security", "REST APIs", "Lombok", "Maven"],
     github: "https://github.com/kkc-ritwik/Foodie-Express/tree/Foodie",
     live: "https://github.com/kkc-ritwik/Foodie-Express/tree/Foodie",
@@ -70,7 +119,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Study-Notion",
     description: "A comprehensive MERN-stack ed-tech platform",
-    image: "zcrum.png",
+    image: "projects/study-notion.svg",
     tech: ["ReactJS", "Redux", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
     github: "https://github.com/kkc-ritwik/Study-Notion/tree/StudyNotion",
     live: "https://github.com/kkc-ritwik/Study-Notion/tree/StudyNotion",
@@ -94,7 +143,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "HRPulse",
     description: "An all-in-one Human Resource Management System backend",
-    image: "reflct.png",
+    image: "projects/hrpulse.svg",
     tech: ["Spring Boot", "MySQL", "JWT", "Hibernate"],
     github: "https://github.com/kkc-ritwik/HRMS-BACKEND/branches",
     live: "https://github.com/kkc-ritwik/HRMS-BACKEND/branches",

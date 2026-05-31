@@ -524,11 +524,11 @@ export default function Footer() {
 
   // Quick links with their respective URLs
   const quickLinks = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '#hero' },
+    { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
     { name: 'About', href: '#about' },
     { name: 'Blog', href: 'https://likhadilse81.blogspot.com/' },
-    { name: 'Services', href: 'https://drive.google.com/file/d/1IKhqVEoRgHuuJbl4wzMv1upmdiJbFdly/view?usp=drive_link' },
     { name: 'Contact', href: '#contact' }
   ];
 

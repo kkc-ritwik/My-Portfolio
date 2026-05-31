@@ -181,7 +181,7 @@
 // }
 
 
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Zap } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Code } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -190,6 +190,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+
+  const openCommandPalette = () => {
+    window.dispatchEvent(new CustomEvent('open-command'));
+  };
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -202,8 +206,8 @@ export default function Navbar() {
       
       // Determine active section based on scroll position
       const sections = [
-        'hero', 'about', 'skills', 'projects', 'resume', 
-        'gaming', 'achievements', 'certifications', 'contact'
+        'hero', 'about', 'services', 'skills', 'projects', 'github', 'testimonials',
+        'resume', 'gaming', 'achievements', 'certifications', 'contact'
       ];
       
       for (const section of sections) {
@@ -224,17 +228,18 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#about', label: 'About' },
+    { href: '#services', label: 'Services' },
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
+    { href: '#github', label: 'GitHub' },
+    { href: '#testimonials', label: 'Reviews' },
     { href: '#resume', label: 'Resume' },
-    { href: '#gaming', label: 'Gaming' },
     { href: '#achievements', label: 'Achievements' },
-    { href: '#certifications', label: 'Certifications' },
     { href: '#contact', label: 'Contact' }
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white/90 backdrop-blur-md shadow-lg py-2' 
@@ -309,6 +314,22 @@ export default function Navbar() {
             ))}
             
             <div className="flex items-center pl-6 space-x-4 border-l border-gray-200">
+              <motion.button
+                type="button"
+                onClick={openCommandPalette}
+                className={`inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg border text-xs font-medium transition-all ${
+                  scrolled
+                    ? 'border-gray-300 text-gray-700 hover:border-indigo-400 hover:text-indigo-600 hover:bg-indigo-50'
+                    : 'border-white/30 text-gray-100 hover:border-indigo-300 hover:text-white hover:bg-white/10'
+                }`}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                aria-label="Open command palette"
+                title="Open command palette"
+              >
+                <span>Ctrl+K</span>
+                <span className="hidden lg:inline text-[10px] px-1.5 py-0.5 rounded border border-current/30 opacity-80">⌘K</span>
+              </motion.button>
               <motion.a 
                 href="https://github.com/kkc-ritwik" 
                 target="_blank" 
@@ -411,6 +432,23 @@ export default function Navbar() {
                     {link.label}
                   </motion.a>
                 ))}
+
+                  <motion.button
+                    type="button"
+                    onClick={() => {
+                      openCommandPalette();
+                      setIsOpen(false);
+                    }}
+                    className="px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 transition-all text-left"
+                    variants={{
+                      open: { opacity: 1, y: 0 },
+                      closed: { opacity: 0, y: 20 }
+                    }}
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Command Palette (Ctrl+K)
+                  </motion.button>
                 
                 <motion.div 
                   className="flex space-x-6 px-3 py-4 border-t border-gray-100 mt-2"

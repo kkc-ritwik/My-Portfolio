@@ -1,6 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist: [
+    {
+      // Solid accent utilities used dynamically by Services/Testimonials/Process/Stats cards
+      pattern:
+        /(from|to|bg|text|border)-(indigo|fuchsia|cyan|emerald|violet|blue|teal|green)-(200|300|400|500|600|900)/,
+    },
+    {
+      // The same accents with the few opacity modifiers used on corner accents / chips
+      pattern:
+        /(from|bg|border|text)-(indigo|fuchsia|cyan|emerald|violet|blue|teal|green)-(500|900)\/(10|20|30|50)/,
+    },
+  ],
   theme: {
     extend: {
       animation: {
