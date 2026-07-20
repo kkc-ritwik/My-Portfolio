@@ -18,20 +18,20 @@ export const testimonialsData: Testimonial[] = [
       'Ritwik delivered our backend microservices ahead of schedule and the code quality was excellent. Clear communication throughout, and he handled the AWS deployment end to end. Will definitely work with him again.',
     name: 'Client Name',
     role: 'Project Lead',
-    company: 'Sky Tech',
+    company: 'Private Client',
     rating: 5,
     accent: 'violet',
-    initials: 'ST',
+    initials: 'PC',
   },
   {
     quote:
       'We needed a reactive, scalable backend with a proper microservices architecture and Ritwik nailed it. Strong on Spring Boot, Kafka and security. A reliable developer who genuinely understands distributed systems.',
     name: 'Client Name',
     role: 'CTO',
-    company: 'Triaxa FZCO',
+    company: 'Freelance Client',
     rating: 5,
     accent: 'fuchsia',
-    initials: 'TX',
+    initials: 'FC',
   },
   {
     quote:

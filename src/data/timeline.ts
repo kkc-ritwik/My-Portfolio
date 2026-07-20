@@ -10,14 +10,14 @@ export const timelineData: TimelineItem[] = [
   },
   {
     year: 'Present · Freelance',
-    title: 'Backend Developer — Triaxa FZCO',
+    title: 'Backend Developer',
     company: 'Freelance Client',
     description: 'Backend development & microservices design using Java 17+, Spring Boot, WebFlux, Spring Cloud (Eureka, API Gateway, Circuit Breaker), Kafka, Docker & Kubernetes; OAuth2/OpenID security with MongoDB, PostgreSQL & MySQL.',
     icon: 'work'
   },
   {
     year: 'Present · Freelance',
-    title: 'Full Stack Developer — Sky Tech',
+    title: 'Full Stack Developer',
     company: 'Freelance Client',
     description: 'Delivering full-stack software development and ongoing product support as a freelance Full Stack Developer.',
     icon: 'work'

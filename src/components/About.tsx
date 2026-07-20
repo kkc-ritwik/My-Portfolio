@@ -169,8 +169,8 @@ export default function About() {
               <motion.p className="text-lg text-gray-300 leading-relaxed" variants={fadeInUp}>
                 Alongside my full-time roles, I actively work as a freelance developer and
                 have delivered several successful projects for clients — including ongoing
-                engagements with <span className="font-semibold text-blue-300">Sky Tech</span> (Full Stack Developer &amp; support) and
-                <span className="font-semibold text-blue-300"> Triaxa FZCO</span> (Backend Developer — microservices &amp; reactive systems).
+                engagements in <span className="font-semibold text-blue-300">full-stack development</span> &amp; product support and
+                backend microservices &amp; reactive systems work.
                 With 200+ DSA problems solved and national-level hackathon experience, I
                 combine strong problem-solving with practical engineering to ship reliable,
                 high-performance products. I'm always learning and eager to take on
